@@ -1,95 +1,220 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Button } from "@mantine/core";
+import Link from "next/link";
+import {
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconFileCv,
+} from "@tabler/icons-react";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="container">
+      <div className="navbar" id="navbar">
+        <span className="navbarText">
+          <a href="#about">About</a>
+        </span>
+
+        <span className="navbarText">
+          <a href="#projects">Projects</a>
+        </span>
+
+        <span className="navbarText">
+          <a href="#skills">Skills</a>
+        </span>
+
+        <span className="navbarText">
+          <a href="#contact">Contact Me</a>
+        </span>
+      </div>
+
+      <div className="title">
+        <img
+          src="/profile.jpg"
+          alt="profile"
+          style={{
+            backgroundImage: "url(/profile.jpg)",
+            borderRadius: "50%",
+            boxShadow: "0 0 35px 2px cornflowerblue",
+            width: "10vw",
+            minWidth: "10rem",
+            aspectRatio: "1/1",
+          }}
+        ></img>
+
+        <h3
+          style={{
+            minWidth: "300px",
+            width: "60vw",
+            fontSize: "1.2rem",
+            padding: "0 3vw 0 3vw",
+          }}
+        >
+          Hi! I'm Simonas Stonkus, a recent Astrophysics and Relativity graduate
+          that has switched to software engineering. My current focus is in web
+          development using React, Next.Js and Typescript.
+        </h3>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "center",
+          gap: "0.5rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <Button leftSection={<IconFileCv />} radius="lg" color="black">
+          Resume
+        </Button>
+
+        <Button leftSection={<IconBrandGithub />} radius="lg" color="black">
+          Github
+        </Button>
+
+        <Button leftSection={<IconBrandLinkedin />} radius="lg" color="black">
+          LinkedIn
+        </Button>
+      </div>
+
+      <section className="about">
+        <h3 id="about" style={{ fontSize: "1.5rem" }}>
+          About me
+        </h3>
+        <h3
+          style={{
+            margin: "15px",
+            fontWeight: "normal",
+            minWidth: "300px",
+            width: "60vw",
+            fontSize: "1rem",
+            left: "50%",
+            padding: "0 3vw 0 3vw",
+          }}
+        >
+          During my undergraduate and postgraduate studies I worked extensively
+          with Python. Through assignments, projects and personal work I mainly
+          focused on data analysis and visualization. Following my studies, I
+          decided to pursue software engineering as a career and have since
+          expanded my skillset by taking courses on Java, Kotlin, C++ on top of
+          learning more about data structures and algorithms. I have also been
+          working on personal projects using React, and Next.Js.
+        </h3>
+      </section>
+
+      <div className="projects" id="projects">
+        <h3 style={{ fontSize: "1.5rem" }}>Projects</h3>
+
+        <div className="projectContainer">
+          <span>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Longitudinally accurate timezones
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              Website to calculate what your timezone would be if you used your
+              longitudinal position. Utilizes inbuilt locator API for getting
+              location data from the user. Includes a game on guessing
+              longitudinally accurate timezones of the 1000 most populous cities
+              in the world.
+            </p>
+
+            <Link href="https://timezones.stonkus.dev/" target="_blank">
+              {""}
+              <Button color="cornflowerblue">Visit the website</Button>
+            </Link>
+
+            <Link
+              href="https://github.com/SimonasStonkus/more-accurate-timezones"
+              target="_blank"
+            >
+              {" "}
+              <Button color="cornflowerblue">View the code</Button>
+            </Link>
+          </span>
+          <img
+            src="/timezones.png"
+            style={{
+              objectFit: "cover",
+              minWidth: "250px",
+              maxWidth: "17vw",
+              borderRadius: "0.5rem",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          />
+        </div>
+
+        <div className="projectContainer">
+          <span>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Steam Inventory Evaluator
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              Built using the Steam Community API. After providing your
+              steamid64, the bot fetches the contents of the inventory and then
+              queries the market api to get values for each of the items,
+              storing the total value for comparison over time.
+            </p>
+            <div className="projectButtonContainer">
+              <Link
+                href="https://github.com/SimonasStonkus/Disc-Bot"
+                target="_blank"
+              >
+                {" "}
+                <Button color="cornflowerblue">View the code</Button>
+              </Link>
+            </div>
+          </span>
+          <img
+            src="/discordBot.png"
+            style={{
+              objectFit: "cover",
+              minWidth: "250px",
+              maxWidth: "17vw",
+              borderRadius: "0.5rem",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          />
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="skills" id="skills">
+        <div className="skillsContainer"></div>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="contact" id="contact">
+        <h3>Contact me me on LinkedIn</h3>
       </div>
-    </main>
-  )
+      <div className="backtotop">
+        <a href="#">Back to top</a>
+      </div>
+    </div>
+  );
 }
