@@ -30,7 +30,7 @@ export default function Page() {
       <div className="title">
         <img
           src="/profile.jpg"
-          alt="profile"
+          alt="Simonas Stonkus"
           style={{
             backgroundImage: "url(/profile.jpg)",
             borderRadius: "50%",
@@ -49,9 +49,9 @@ export default function Page() {
             padding: "0 3vw 0 3vw",
           }}
         >
-          Hi! I'm Simonas Stonkus, a recent Astrophysics and Relativity graduate
-          that has switched to software engineering. My current focus is in web
-          development using React, Next.Js and Typescript.
+          Hi! I&apos;m Simonas Stonkus, a recent Astrophysics and Relativity
+          graduate that has switched to software engineering. My current focus
+          is in web development using React, Next.Js and Typescript.
         </h3>
       </div>
 
@@ -146,6 +146,7 @@ export default function Page() {
           </span>
           <img
             src="/timezones.png"
+            alt="timezones"
             style={{
               objectFit: "cover",
               minWidth: "250px",
@@ -193,6 +194,7 @@ export default function Page() {
           </span>
           <img
             src="/discordBot.png"
+            alt="discordBot"
             style={{
               objectFit: "cover",
               minWidth: "250px",
