@@ -64,15 +64,39 @@ export default function Page() {
           flexWrap: "wrap",
         }}
       >
-        <Button leftSection={<IconFileCv />} radius="lg" color="black">
+        <Button
+          component={Link}
+          href="/download/Simonas_Stonkus_Resume.pdf"
+          leftSection={<IconFileCv color="white" />}
+          target="_blank"
+          radius="lg"
+          color="black"
+          style={{ color: "white" }}
+        >
           Resume
         </Button>
 
-        <Button leftSection={<IconBrandGithub />} radius="lg" color="black">
+        <Button
+          component={Link}
+          href="https://github.com/SimonasStonkus"
+          leftSection={<IconBrandGithub color="white" />}
+          target="_blank"
+          radius="lg"
+          color="black"
+          style={{ color: "white" }}
+        >
           Github
         </Button>
 
-        <Button leftSection={<IconBrandLinkedin />} radius="lg" color="black">
+        <Button
+          component={Link}
+          href="https://www.linkedin.com/in/simonas-stonkus/"
+          target="_blank"
+          leftSection={<IconBrandLinkedin color="white" />}
+          radius="lg"
+          color="black"
+          style={{ color: "white" }}
+        >
           LinkedIn
         </Button>
       </div>
