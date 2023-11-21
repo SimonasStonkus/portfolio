@@ -69,9 +69,9 @@ export default function Page() {
           href="/download/Simonas_Stonkus_Resume.pdf"
           leftSection={<IconFileCv color="white" />}
           target="_blank"
-          radius="lg"
           color="black"
           style={{ color: "white" }}
+          radius="md"
         >
           Resume
         </Button>
@@ -81,9 +81,9 @@ export default function Page() {
           href="https://github.com/SimonasStonkus"
           leftSection={<IconBrandGithub color="white" />}
           target="_blank"
-          radius="lg"
           color="black"
           style={{ color: "white" }}
+          radius="md"
         >
           Github
         </Button>
@@ -93,9 +93,9 @@ export default function Page() {
           href="https://www.linkedin.com/in/simonas-stonkus/"
           target="_blank"
           leftSection={<IconBrandLinkedin color="white" />}
-          radius="lg"
           color="black"
           style={{ color: "white" }}
+          radius="md"
         >
           LinkedIn
         </Button>
@@ -157,7 +157,9 @@ export default function Page() {
 
             <Link href="https://timezones.stonkus.dev/" target="_blank">
               {""}
-              <Button color="cornflowerblue">Visit the website</Button>
+              <Button color="cornflowerblue" radius="md">
+                Visit the website
+              </Button>
             </Link>
 
             <Link
@@ -165,7 +167,9 @@ export default function Page() {
               target="_blank"
             >
               {" "}
-              <Button color="cornflowerblue">View the code</Button>
+              <Button color="cornflowerblue" radius="md">
+                View the code
+              </Button>
             </Link>
           </span>
           <img
@@ -212,7 +216,9 @@ export default function Page() {
                 target="_blank"
               >
                 {" "}
-                <Button color="cornflowerblue">View the code</Button>
+                <Button color="cornflowerblue" radius="md">
+                  View the code
+                </Button>
               </Link>
             </div>
           </span>
@@ -230,13 +236,24 @@ export default function Page() {
           />
         </div>
       </div>
-
+      <h3 style={{ fontSize: "1.5rem" }}>Skills</h3>
       <div className="skills" id="skills">
-        <div className="skillsContainer"></div>
+        <div className="skillsContainer">Python</div>
+        <div className="skillsContainer">Java/TypeScript</div>
+        <div className="skillsContainer">Next.js</div>
+        <div className="skillsContainer">Git</div>
+        <div className="skillsContainer">HTML</div>
+        <div className="skillsContainer">CSS</div>
+        <div className="skillsContainer">SQL</div>
+        <div className="skillsContainer">React</div>
+        <div className="skillsContainer">Java</div>
+        <div className="skillsContainer">Kotlin</div>
+        <div className="skillsContainer">C++</div>
+        <div className="skillsContainer">R</div>
       </div>
 
       <div className="contact" id="contact">
-        <h3>Contact me me on LinkedIn</h3>
+        <h3 style={{ fontSize: "1.5rem" }}>Contact me on LinkedIn</h3>
       </div>
       <div className="backtotop">
         <a href="#">Back to top</a>

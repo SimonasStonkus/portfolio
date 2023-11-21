@@ -4,6 +4,8 @@ html {
 
 body {
   background: #fbfaf5 !important;
+  /* background: #eae5e3 !important; */
+  background: #fcf4e2 !important;
 }
 
 a:link,
@@ -95,9 +97,9 @@ a:visited {
 }
 
 .projectContainer {
-  background: #e5e4e6;
+  background: #e7e2d1;
   border-radius: 0.5rem;
-
+  border: 2px solid #b6e1e7;
   min-width: 325px;
   display: flex;
   flex-direction: row;
@@ -131,7 +133,20 @@ a:visited {
 #contact {
   scroll-margin-top: 70px;
 }
-
+.skills {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-width: 60vw;
+}
+.skillsContainer {
+  font-size: 1rem;
+  padding: 10px;
+  background: #e7e2d1;
+  border-radius: 0.5rem;
+  border: 2px solid #b6e1e7;
+  min-width: 4rem;
+}
 .backtotop {
   position: fixed;
   bottom: 1rem;
