@@ -44,7 +44,7 @@ export default function Page() {
         <h3
           style={{
             minWidth: "300px",
-            width: "60vw",
+            width: "40vw",
             fontSize: "1.2rem",
             padding: "0 3vw 0 3vw",
           }}
@@ -105,12 +105,12 @@ export default function Page() {
         <h3 id="about" style={{ fontSize: "1.5rem" }}>
           About me
         </h3>
-        <h3
+        <p
           style={{
             margin: "15px",
             fontWeight: "normal",
             minWidth: "300px",
-            width: "60vw",
+            width: "40vw",
             fontSize: "1rem",
             left: "50%",
             padding: "0 3vw 0 3vw",
@@ -123,7 +123,7 @@ export default function Page() {
           expanded my skillset by taking courses on Java, Kotlin, C++ on top of
           learning more about data structures and algorithms. I have also been
           working on personal projects using React, and Next.Js.
-        </h3>
+        </p>
       </section>
 
       <div className="projects" id="projects">
@@ -225,6 +225,63 @@ export default function Page() {
           <img
             src="/discordBot.png"
             alt="discordBot"
+            style={{
+              objectFit: "cover",
+              minWidth: "250px",
+              maxWidth: "17vw",
+              borderRadius: "0.5rem",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          />
+        </div>
+
+        <div className="projectContainer">
+          <span>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Posture/Hydration Check
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              Set an interval and press Play, to have a couple of beeps play
+              every now and then to remind you to sit straight and drink water.
+            </p>
+
+            <Link
+              href="https://https://posture-check.stonkus.dev/"
+              target="_blank"
+            >
+              {""}
+              <Button color="cornflowerblue" radius="md">
+                Visit the website
+              </Button>
+            </Link>
+
+            <Link
+              href="https://github.com/SimonasStonkus/posture-check"
+              target="_blank"
+            >
+              {" "}
+              <Button color="cornflowerblue" radius="md">
+                View the code
+              </Button>
+            </Link>
+          </span>
+          <img
+            src="/posture.png"
+            alt="posture"
             style={{
               objectFit: "cover",
               minWidth: "250px",
