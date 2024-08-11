@@ -1,5 +1,6 @@
 import { Button } from "@mantine/core";
 import Link from "next/link";
+import Image from "next/image";
 import {
   IconBrandLinkedin,
   IconBrandGithub,
@@ -28,30 +29,31 @@ export default function Page() {
       </div>
 
       <div className="title">
-        <img
+        <Image
           src="/profile.jpg"
           alt="Simonas Stonkus"
+          width={"250"}
+          height={"250"}
           style={{
             backgroundImage: "url(/profile.jpg)",
             borderRadius: "50%",
             boxShadow: "0 0 35px 2px cornflowerblue",
-            width: "10vw",
-            minWidth: "10rem",
             aspectRatio: "1/1",
           }}
-        ></img>
+        ></Image>
 
         <h3
           style={{
-            minWidth: "300px",
+            minWidth: "400px",
             width: "40vw",
             fontSize: "1.2rem",
             padding: "0 3vw 0 3vw",
           }}
         >
-          Hi! I&apos;m Simonas Stonkus, a recent Astrophysics and Relativity
-          graduate that has switched to software engineering. My current focus
-          is in web development using React, Next.Js and Typescript.
+          Hi! I&apos;m Simonas Stonkus, a software engineer with a background in
+          Astrophysics and Relativity. I am currently working as a full stack
+          engineer at Koduu, working on multiple projects primarily in
+          Typescript, React and Node.js.
         </h3>
       </div>
 
@@ -102,35 +104,165 @@ export default function Page() {
       </div>
 
       <section className="about">
-        <h3 id="about" style={{ fontSize: "1.5rem" }}>
+        <h3 id="about" style={{ fontSize: "1.5rem", marginBlockEnd: "0px" }}>
           About me
         </h3>
         <p
           style={{
             margin: "15px",
             fontWeight: "normal",
-            minWidth: "300px",
+            minWidth: "400px",
             width: "40vw",
             fontSize: "1rem",
             left: "50%",
             padding: "0 3vw 0 3vw",
           }}
         >
-          During my undergraduate and postgraduate studies I worked extensively
-          with Python. Through assignments, projects and personal work I mainly
-          focused on data analysis and visualization. Following my studies, I
-          decided to pursue software engineering as a career and have since
-          expanded my skillset by taking courses on Java, Kotlin, C++ on top of
-          learning more about data structures and algorithms. I have also been
-          working on personal projects using React, and Next.Js.
+          My undergraduate and postgraduate studies provided me with strong
+          baseline programming knowledge. Through assignments, research projects
+          and personal work I primarily focused on working with data. Following
+          the completion of my postgraduate degree, I began my pursuit of
+          software engineering as a career. I began by expanding my overall
+          knowledge through courses on programming languages such as Java,
+          Kotlin and C++. I then began to focus on web development, learning
+          Javascript and React. I have since worked on multiple projects, both
+          personal and professional, to further develop my skills in these
+          areas. As of January 2024, I have been working at Koduu as a full
+          stack software engineer.
         </p>
       </section>
 
       <div className="projects" id="projects">
         <h3 style={{ fontSize: "1.5rem" }}>Projects</h3>
+        <div className="projectContainer">
+          <span style={{ marginBottom: "5px" }}>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              BizCrunch
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              A platform for enabling the merger and acquisition process for
+              both buyers and sellers. It helps prospective buyers find
+              businesses that fit their criteria through a complicated set of
+              filters and algorithms. Company owners interested in selling their
+              business can get accurate valuations and connect with potential
+              buyers.
+            </p>
+            <Link href="https://bizcrunch.co" target="_blank">
+              <Button color="cornflowerblue" radius="md">
+                Visit the website
+              </Button>
+            </Link>
+          </span>
+          <Image
+            src="/bizcrunch.png"
+            alt="bizcrunch"
+            height={337.5}
+            width={412.5}
+            style={{
+              objectFit: "cover",
+              borderRadius: "0.5rem",
+            }}
+          />
+        </div>
+        <div className="projectContainer">
+          <span style={{ marginBottom: "5px" }}>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              VoxMail
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              A voice message based customer support widget for websites. Users
+              can leave voice messages which get transcribed (and optionally
+              translated) to text. The messages are then sent to the company
+              email address.
+            </p>
+            <Link href="https://vox-mail.com" target="_blank">
+              <Button color="cornflowerblue" radius="md">
+                Visit the website
+              </Button>
+            </Link>
+          </span>
+          <Image
+            src="/voxmail.png"
+            alt="voxmail"
+            height={337.5}
+            width={412.5}
+            style={{
+              objectFit: "cover",
+              borderRadius: "0.5rem",
+            }}
+          />
+        </div>
 
         <div className="projectContainer">
-          <span>
+          <span style={{ marginBottom: "5px" }}>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Character Crucible
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              An AI powered character creation tool for tabletop roleplaying
+              games. Describe your character in as much or as little detail as
+              you want and the AI will generate a character sheet that is ready
+              to play in minutes.
+            </p>
+            <Link href="https://charactercrucible.com" target="_blank">
+              {""}
+              <Button color="cornflowerblue" radius="md">
+                Visit the website
+              </Button>
+            </Link>
+          </span>
+          <Image
+            src="/charactercrucible.png"
+            alt="charactercrucible"
+            height={337.5}
+            width={412.5}
+            style={{
+              objectFit: "cover",
+              borderRadius: "0.5rem",
+            }}
+          />
+        </div>
+        <div className="projectContainer">
+          <span style={{ marginBottom: "5px" }}>
             <p
               style={{
                 margin: "15px",
@@ -172,22 +304,20 @@ export default function Page() {
               </Button>
             </Link>
           </span>
-          <img
+          <Image
             src="/timezones.png"
             alt="timezones"
+            height={337.5}
+            width={412.5}
             style={{
               objectFit: "cover",
-              minWidth: "250px",
-              maxWidth: "17vw",
               borderRadius: "0.5rem",
-              marginTop: "10px",
-              marginBottom: "10px",
             }}
           />
         </div>
 
         <div className="projectContainer">
-          <span>
+          <span style={{ marginBottom: "5px" }}>
             <p
               style={{
                 margin: "15px",
@@ -222,22 +352,20 @@ export default function Page() {
               </Link>
             </div>
           </span>
-          <img
+          <Image
             src="/discordBot.png"
             alt="discordBot"
+            height={337.5}
+            width={412.5}
             style={{
               objectFit: "cover",
-              minWidth: "250px",
-              maxWidth: "17vw",
               borderRadius: "0.5rem",
-              marginTop: "10px",
-              marginBottom: "10px",
             }}
           />
         </div>
 
         <div className="projectContainer">
-          <span>
+          <span style={{ marginBottom: "5px" }}>
             <p
               style={{
                 margin: "15px",
@@ -279,30 +407,29 @@ export default function Page() {
               </Button>
             </Link>
           </span>
-          <img
+          <Image
             src="/posture.png"
             alt="posture"
+            height={337.5}
+            width={412.5}
             style={{
               objectFit: "cover",
-              minWidth: "250px",
-              maxWidth: "17vw",
               borderRadius: "0.5rem",
-              marginTop: "10px",
-              marginBottom: "10px",
             }}
           />
         </div>
       </div>
       <h3 style={{ fontSize: "1.5rem" }}>Skills</h3>
       <div className="skills" id="skills">
-        <div className="skillsContainer">Python</div>
-        <div className="skillsContainer">Java/TypeScript</div>
+        <div className="skillsContainer">Javascript/Typescript</div>
+        <div className="skillsContainer">React.js</div>
+        <div className="skillsContainer">Node.js</div>
         <div className="skillsContainer">Next.js</div>
         <div className="skillsContainer">Git</div>
         <div className="skillsContainer">HTML</div>
         <div className="skillsContainer">CSS</div>
         <div className="skillsContainer">SQL</div>
-        <div className="skillsContainer">React</div>
+        <div className="skillsContainer">Python</div>
         <div className="skillsContainer">Java</div>
         <div className="skillsContainer">Kotlin</div>
         <div className="skillsContainer">C++</div>
