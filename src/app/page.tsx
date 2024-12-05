@@ -30,12 +30,12 @@ export default function Page() {
 
       <div className="title">
         <Image
-          src="/profile.jpg"
+          src="/profile.webp"
           alt="Simonas Stonkus"
           width={"250"}
           height={"250"}
           style={{
-            backgroundImage: "url(/profile.jpg)",
+            backgroundImage: "url(/profile.webp)",
             borderRadius: "50%",
             boxShadow: "0 0 35px 2px cornflowerblue",
             aspectRatio: "1/1",
@@ -167,7 +167,7 @@ export default function Page() {
             </Link>
           </span>
           <Image
-            src="/bizcrunch.png"
+            src="/bizcrunch.webp"
             alt="bizcrunch"
             height={337.5}
             width={412.5}
@@ -208,7 +208,7 @@ export default function Page() {
             </Link>
           </span>
           <Image
-            src="/voxmail.png"
+            src="/voxmail.webp"
             alt="voxmail"
             height={337.5}
             width={412.5}
@@ -251,7 +251,7 @@ export default function Page() {
             </Link>
           </span>
           <Image
-            src="/charactercrucible.png"
+            src="/charactercrucible.webp"
             alt="charactercrucible"
             height={337.5}
             width={412.5}
@@ -305,7 +305,7 @@ export default function Page() {
             </Link>
           </span>
           <Image
-            src="/timezones.png"
+            src="/timezones.webp"
             alt="timezones"
             height={337.5}
             width={412.5}
@@ -353,7 +353,7 @@ export default function Page() {
             </div>
           </span>
           <Image
-            src="/discordBot.png"
+            src="/discordBot.webp"
             alt="discordBot"
             height={337.5}
             width={412.5}
@@ -408,7 +408,7 @@ export default function Page() {
             </Link>
           </span>
           <Image
-            src="/posture.png"
+            src="/posture.webp"
             alt="posture"
             height={337.5}
             width={412.5}
