@@ -1,15 +1,12 @@
-import { Button } from "@mantine/core";
+"use client";
+import { Button, Container, Stack, Title } from "@mantine/core";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconFileCv,
-} from "@tabler/icons-react";
+import { LinkedinLogo, GithubLogo, ReadCvLogo } from "@phosphor-icons/react";
 
 export default function Page() {
   return (
-    <div className="container">
+    <Stack justify="center" align="center">
       <div className="navbar" id="navbar">
         <span className="navbarText">
           <a href="#about">About</a>
@@ -28,7 +25,11 @@ export default function Page() {
         </span>
       </div>
 
-      <div className="title">
+      <Stack
+        justify="center"
+        align="center"
+        className="mt-[8vh] mb-[1vh] relative text-[1.5rem] font-[600] text-[#333] text-center"
+      >
         <Image
           src="/profile.webp"
           alt="Simonas Stonkus"
@@ -42,7 +43,8 @@ export default function Page() {
           }}
         ></Image>
 
-        <h3
+        <Title
+          order={3}
           style={{
             minWidth: "400px",
             width: "40vw",
@@ -54,8 +56,8 @@ export default function Page() {
           Astrophysics and Relativity. I am currently working as a full stack
           engineer at Koduu, working on multiple projects primarily in
           Typescript, React and Node.js.
-        </h3>
-      </div>
+        </Title>
+      </Stack>
 
       <div
         style={{
@@ -69,7 +71,7 @@ export default function Page() {
         <Button
           component={Link}
           href="/download/Simonas_Stonkus_Resume.pdf"
-          leftSection={<IconFileCv color="white" />}
+          leftSection={<ReadCvLogo color="white" />}
           target="_blank"
           color="black"
           style={{ color: "white" }}
@@ -81,7 +83,7 @@ export default function Page() {
         <Button
           component={Link}
           href="https://github.com/SimonasStonkus"
-          leftSection={<IconBrandGithub color="white" />}
+          leftSection={<GithubLogo color="white" />}
           target="_blank"
           color="black"
           style={{ color: "white" }}
@@ -94,7 +96,7 @@ export default function Page() {
           component={Link}
           href="https://www.linkedin.com/in/simonas-stonkus/"
           target="_blank"
-          leftSection={<IconBrandLinkedin color="white" />}
+          leftSection={<LinkedinLogo color="white" />}
           color="black"
           style={{ color: "white" }}
           radius="md"
@@ -125,15 +127,60 @@ export default function Page() {
           software engineering as a career. I began by expanding my overall
           knowledge through courses on programming languages such as Java,
           Kotlin and C++. I then began to focus on web development, learning
-          Javascript and React. I have since worked on multiple projects, both
-          personal and professional, to further develop my skills in these
-          areas. As of January 2024, I have been working at Koduu as a full
-          stack software engineer.
+          Javascript and React. In January 2024, I began working as a full stack
+          software engineer at Koduu, and have worked on multiple projects, both
+          internal and external contracts.
         </p>
       </section>
 
       <div className="projects" id="projects">
         <h3 style={{ fontSize: "1.5rem" }}>Projects</h3>
+        <div className="projectContainer">
+          <span style={{ marginBottom: "5px" }}>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              ShredVision
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              An app that enables easy booking of coaching services for skiing
+              and snowboarding. Users can sign up on the app, and upload videos
+              of themselves skiing or snowboarding. They can leave captions on
+              the specific videos as well as a description of what they would
+              like to focus on. They then have a choice of being paired with a
+              specific coach, or having a coach selected for them. Once the user
+              pays for the coaching session, the coach will review the users
+              performance and leave feedback. The platform includes a 1-on1 chat
+              between users and coaches, so that all communication is maintained
+              in platform
+            </p>
+
+            <Button color="cornflowerblue" radius="md" disabled>
+              Website not live yet
+            </Button>
+          </span>
+          <Image
+            src="/shredvision.webp"
+            alt="shredvision"
+            height={337.5}
+            width={412.5}
+            style={{
+              objectFit: "cover",
+              borderRadius: "0.5rem",
+            }}
+          />
+        </div>
         <div className="projectContainer">
           <span style={{ marginBottom: "5px" }}>
             <p
@@ -253,6 +300,61 @@ export default function Page() {
           <Image
             src="/charactercrucible.webp"
             alt="charactercrucible"
+            height={337.5}
+            width={412.5}
+            style={{
+              objectFit: "cover",
+              borderRadius: "0.5rem",
+            }}
+          />
+        </div>
+        <div className="projectContainer">
+          <span style={{ marginBottom: "5px" }}>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Trinity Survey Feedback App
+            </p>
+            <p
+              style={{
+                margin: "15px",
+                fontSize: "0.8rem",
+                maxWidth: "40rem",
+                left: "50%",
+              }}
+            >
+              An app made for the School of Chemistry in Trinity College. This
+              was made in order to reduce monthly running costs of using a
+              pre-existing service that provides many features that are not
+              needed by the School of Chemistry. The app containss a basic
+              survey interface, as well as an admining dashboard which allows
+              for selection of existing surveys and creation of new surveys.
+              Included in the app is also the ability to submit feedback even
+              when the browser is offline, as the School often runs outreach
+              programmes in locations where a stable internet connection is not
+              guaranteed. To solve this, if the browser is offline, the
+              responses are stored locally, and once an internet connection is
+              restored, they are all uploaded to the database, maintaining
+              timestamps of feedback.
+            </p>
+
+            <Link
+              href="https://trinity-feedback-app.vercel.app/"
+              target="_blank"
+            >
+              {""}
+              <Button color="cornflowerblue" radius="md">
+                Visit the website
+              </Button>
+            </Link>
+          </span>
+          <Image
+            src="/feedback.webp"
+            alt="timezones"
             height={337.5}
             width={412.5}
             style={{
@@ -420,7 +522,7 @@ export default function Page() {
         </div>
       </div>
       <h3 style={{ fontSize: "1.5rem" }}>Skills</h3>
-      <div className="skills" id="skills">
+      <div className="skills max-w-[800px]" id="skills">
         <div className="skillsContainer">Javascript/Typescript</div>
         <div className="skillsContainer">React.js</div>
         <div className="skillsContainer">Node.js</div>
@@ -442,6 +544,6 @@ export default function Page() {
       <div className="backtotop">
         <a href="#">Back to top</a>
       </div>
-    </div>
+    </Stack>
   );
 }
